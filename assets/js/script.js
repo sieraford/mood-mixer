@@ -6,7 +6,7 @@ var getGiphy = function (emotion) {
         if (response.ok) {
           response.json().then(function (data) {
             console.log(data);
-            var imgURL = data.data.images.downsized_large.url;
+            var imgURL = data.data.images.fixed_height.url;
             console.log(imgURL);
             document.getElementById(`${emotion}`).innerHTML = '<img src = "'+imgURL+'">';
           });
@@ -27,3 +27,5 @@ var getGiphy = function (emotion) {
   getGiphy("energized");
   getGiphy("stressed");
   getGiphy("surprised");
+
+  
