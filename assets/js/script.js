@@ -1,3 +1,12 @@
+var happy     = document.querySelector('#happy') 
+var sad       = document.querySelector('#sad')
+var focused   = document.querySelector('#focused')
+var angry     = document.querySelector('#angry')
+var chill     = document.querySelector('#chill')
+var energized = document.querySelector('#energized')
+var stressed  = document.querySelector('#stressed')
+var surprised = document.querySelector('#surprised')
+
 var getGiphy = function (emotion) {
     var apiUrl = `https://api.giphy.com/v1/gifs/random?api_key=cb1oKYtXnqzw1OxM4W0118EofVY86Hja&tag=${emotion}&limit=1`;
   
@@ -8,7 +17,7 @@ var getGiphy = function (emotion) {
             console.log(data);
             var imgURL = data.data.images.fixed_height.url;
             console.log(imgURL);
-            document.getElementById(`${emotion}`).innerHTML = '<img src = "'+imgURL+'">';
+            document.getElementById(`${emotion}`).innerHTML = '<img id='+emotion+' src = "'+imgURL+'">';
           });
         } else {
           alert('Error: ' + response.statusText);
@@ -28,4 +37,37 @@ var getGiphy = function (emotion) {
   getGiphy("stressed");
   getGiphy("surprised");
 
-  
+
+  document.addEventListener('click',function(event){
+    var element = event.target
+    if (element.matches('img')){
+     localStorage.setItem('emotion', element.id)
+    }
+  });
+
+  // happy.addEventListener('click',function(){
+  //   console.log('hey it works')
+  // } );
+  // sad.addEventListener('click',function(){
+  //   console.log('hey it works')
+  // } );
+  // focused.addEventListener('click',function(){
+  //   console.log('hey it works')
+  // } );
+  // angry.addEventListener('click',function(){
+  //   console.log('hey it works')
+  // } );
+  // angry.addEventListener('click',function(){
+  //   console.log('hey it works')
+  // } );
+  // chill.addEventListener('click',function(){
+  //   console.log('hey it works')
+  // } );
+  // energized.addEventListener('click',function(){
+  //   console.log('hey it works')
+  // } );  stressed.addEventListener('click',function(){
+  //   console.log('hey it works')
+  // } );
+  // surprised.addEventListener('click',function(){
+  //   console.log('hey it works')
+  // } );
