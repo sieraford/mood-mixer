@@ -6,7 +6,6 @@ var chill     = document.querySelector('#chill')
 var energized = document.querySelector('#energized')
 var stressed  = document.querySelector('#stressed')
 var surprised = document.querySelector('#surprised')
-var spotify_api_key = '1db2eac78emsha758dc391663482p1289b7jsn45dfc336be15'
 
 var getGiphy = function (emotion) {
     var apiUrl = `https://api.giphy.com/v1/gifs/random?api_key=cb1oKYtXnqzw1OxM4W0118EofVY86Hja&tag=${emotion}&limit=1`;
@@ -28,22 +27,6 @@ var getGiphy = function (emotion) {
         alert('Cannot connect to Giphy API');
       });
   };
-  
-  var getPlaylists = function() {
-    const options = {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': spotify_api_key,
-        'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
-      }
-    };
-    
-    var emotion = localStorage.getItem('emotion')
-    fetch(`https://spotify23.p.rapidapi.com/search/?rapidapi-key=${spotify_api_key}&q=${emotion}&type=playlists&limit=5`, options)
-      .then(response => response.json())
-      .then(response => console.log(response))
-      .catch(err => console.error(err));
-  }
 
   getGiphy("happy");
   getGiphy("sad");
@@ -53,8 +36,6 @@ var getGiphy = function (emotion) {
   getGiphy("energized");
   getGiphy("stressed");
   getGiphy("surprised");
-  getPlaylists();
-
 
   document.addEventListener('click',function(event){
     var element = event.target
@@ -62,6 +43,7 @@ var getGiphy = function (emotion) {
      localStorage.setItem('emotion', element.id)
 
      window.location.href="playlists.html";
+
     }
   });
 
