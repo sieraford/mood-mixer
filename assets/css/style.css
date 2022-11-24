@@ -1,13 +1,56 @@
 body {
-    font: 
+    font-family: 'Modak', arial rounded MT bold, marker felt, cursive;
 }
 
-span {
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    min-height: 250px;
-    max-height: 250px;
+main {
+    background-color: rgb(237, 132, 218);
+}
+
+.hero {
+    background-color: midnightblue;
+    box-shadow: 10px 10px 10px 10px mediumvioletred;
+    position: relative;
+    width: 100%;
+    z-index: 99;
+    border-radius: 5px;
+}
+
+.title {
+    font-size: 120px;
+    text-align: center;
+    color: mediumvioletred; 
+    text-shadow: 5px 5px 6px rgb(237, 132, 218);
+}
+
+.subtitle {
+    font-size: 40px;
+    text-align: center;
+    color: mediumvioletred; 
+    text-shadow: 3px 3px 4px rgb(237, 132, 218);
+}
+
+.mt-4 {
+    color: mediumvioletred;
+    text-shadow: 3px 3px 4px midnightblue;
+    font-size: 40px;
+    text-align: center;
+    line-height: 250%;
+}
+
+.mt-4:hover {
+    color: midnightblue;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    align-items: center;
+    border-radius: 20px;
+    border-style: ridge;
+    border-width: 7px;
+    border-color: midnightblue;
+    min-height: 200px;
+    max-height: 200px;
 }
