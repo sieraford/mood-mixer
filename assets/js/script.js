@@ -7,6 +7,7 @@ var energized = document.querySelector('#energized')
 var stressed  = document.querySelector('#stressed')
 var surprised = document.querySelector('#surprised')
 
+
 var getGiphy = function (emotion) {
     var apiUrl = `https://api.giphy.com/v1/gifs/random?api_key=cb1oKYtXnqzw1OxM4W0118EofVY86Hja&tag=${emotion}&limit=1`;
   
@@ -39,10 +40,11 @@ var getGiphy = function (emotion) {
 
   document.addEventListener('click',function(event){
     var element = event.target
-    if (element.matches('img')){
+    if (element.matches('img')|| element.matches('h3')){
      localStorage.setItem('emotion', element.id)
 
      window.location.href="playlists.html";
 
     }
   });
+  
