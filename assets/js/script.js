@@ -15,9 +15,7 @@ var getGiphy = function (emotion) {
       .then(function (response) {
         if (response.ok) {
           response.json().then(function (data) {
-            console.log(data);
             var imgURL = data.data.images.fixed_height.url;
-            console.log(imgURL);
             document.getElementById(`${emotion}`).innerHTML = '<img id='+emotion+' src = "'+imgURL+'">';
           });
         } else {

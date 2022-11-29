@@ -16,7 +16,6 @@ var getPlaylists = function() {
       .then(function (response) {
         if (response.ok) {
           response.json().then(function (response) {
-            console.log(response.playlists.items);
             for (i=0; i < 5; i++) {
                 var playlist = document.createElement('a')
                 var playlistURI = response.playlists.items[i].data.uri
