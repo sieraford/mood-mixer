@@ -46,10 +46,3 @@ var getGiphy = function (emotion) {
 
     }
   });
-
-  document.addEventListener('click',function(event){
-    var element = event.target
-    if (element.matches('#back')){
-     window.location.href="index.html";
-    }
-  });
