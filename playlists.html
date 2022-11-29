@@ -4,16 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/playlists.css" />
     <title>Playlists</title>
 </head>
+
 <body>
-    <header>
-        <h1>Playlists</h1>
+    <header class="hero">
+        <h1>Playlists for Your Mood</h1>
     </header>
     <main>
-        <div id="playlists-container"></div>
+        <div id="playlists-container">
+            <a href="#" class="group"></a>
+    
+            <a href="#" class="group"></a>
+    
+            <a href="#" class="group"></a>
+    
+            <a href="#" class="group"></a>
+
+            <a href="#" class="group"></a>
+        </div>
+
         <button id="back">Go Back</button>
     </main>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          },
+            plugins: [
+                require('@tailwindcss/aspect-ratio'),
+            ]
+        }
+      </script>
     <script src="./assets/js/playlists.js"></script> 
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 </body>
 </html>
