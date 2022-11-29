@@ -3,9 +3,9 @@ var sad       = document.querySelector('#sad')
 var focused   = document.querySelector('#focused')
 var angry     = document.querySelector('#angry')
 var chill     = document.querySelector('#chill')
-var energized = document.querySelector('#energized')
+var energized = document.querySelector('#pumped')
 var stressed  = document.querySelector('#stressed')
-var surprised = document.querySelector('#surprised')
+var surprised = document.querySelector('#party')
 
 
 var getGiphy = function (emotion) {
@@ -34,9 +34,9 @@ var getGiphy = function (emotion) {
   getGiphy("focused");
   getGiphy("angry");
   getGiphy("chill");
-  getGiphy("energized");
+  getGiphy("pumped");
   getGiphy("stressed");
-  getGiphy("surprised");
+  getGiphy("party");
 
   document.addEventListener('click',function(event){
     var element = event.target
